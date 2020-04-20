@@ -640,7 +640,7 @@ var Park = function (_Element) {
         key: 'treeDensity',
         value: function treeDensity() {
             var density = this.numTrees / this.area;
-            console.log(this.name + ' has a tree density of ' + density + ' trees per square km.');
+           // console.log(this.name + ' has a tree density of ' + density + ' trees per square km.');
         }
     }]);
 
@@ -671,7 +671,7 @@ var Street = function (_Element2) {
             classification.set(3, 'normal');
             classification.set(4, 'big');
             classification.set(5, 'huge');
-            console.log(this.name + ', build in ' + this.buildYear + ', is a ' + classification.get(this.size) + ' street.');
+            //console.log(this.name + ', build in ' + this.buildYear + ', is a ' + classification.get(this.size) + ' street.');
         }
     }]);
 
@@ -693,7 +693,7 @@ function calc(arr) {
 
 function reportParks(p) {
 
-    console.log('-----PARKS REPORT-----');
+    //console.log('-----PARKS REPORT-----');
 
     // Density
     p.forEach(function (el) {
@@ -710,7 +710,7 @@ function reportParks(p) {
         totalAge = _calc2[0],
         avgAge = _calc2[1];
 
-    console.log('Our ' + p.length + ' parks have an average of ' + avgAge + ' years.');
+    //console.log('Our ' + p.length + ' parks have an average of ' + avgAge + ' years.');
 
     // Which park has more than 1000 trees
     var i = p.map(function (el) {
@@ -718,12 +718,12 @@ function reportParks(p) {
     }).findIndex(function (el) {
         return el >= 1000;
     });
-    console.log(p[i].name + ' has more than 1000 trees.');
+    //console.log(p[i].name + ' has more than 1000 trees.');
 }
 
 function reportStreets(s) {
 
-    console.log('-----STREETS REPORT-----');
+    //console.log('-----STREETS REPORT-----');
 
     //Total and average length of the town's streets
 
@@ -734,7 +734,7 @@ function reportStreets(s) {
         totalLength = _calc4[0],
         avgLength = _calc4[1];
 
-    console.log('Our ' + s.length + ' streets have a total length of ' + totalLength + ' km, with an average of ' + avgLength + ' km.');
+    //console.log('Our ' + s.length + ' streets have a total length of ' + totalLength + ' km, with an average of ' + avgLength + ' km.');
 
     // CLassify sizes
     s.forEach(function (el) {

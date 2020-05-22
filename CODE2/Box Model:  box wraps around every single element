@@ -1,0 +1,58 @@
+Box Model:  box wraps around every single element in html
+Box-sizing: content box (inner element)
+Border-box: includes the content within mention dimensions    box-sizing: borderbox;
+
+
+visibility: hidden:  in the html space but do not show up
+
+display: none: element do not exsists inside the DOM
+
+Templates : take the content and inject it somewhere
+
+<template id="temp">
+	<style type="text/css">
+		h3{
+			color: green;
+		}
+	</style>
+</template>
+
+var shhost = document.geteElementById("shadowhost");
+
+var shroot = shhost.createShadowRoot();
+
+var shChild = document.createElement("span");
+
+
+pseudo. elements are used to give elements some special effects.  extra markup without disturbing the env
+
+
+::after{
+	content:"This is after pseudo element";
+}
+
+
+Data attributes:  store data. , regular attributes are not suitable to store data
+
+data-name="data attr"
+
+profile:hover::before{
+	content: attr(data-name);
+}
+
+
+var addTo = function(passedval){
+	
+	var add = fuction(inner){
+		return passedval + inner;
+	}
+
+	return add;
+}
+
+var obj1 = new addTo(3);
+
+
+obj1(2);
+
+
